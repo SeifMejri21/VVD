@@ -1,0 +1,27 @@
+Package: VVD
+Title: Decomposes time series based on the EEMD method
+Version: 1.0.0
+Authors@R: 
+    person(given = "Seif Eddine",
+           family = "Mejri",
+           role = c("aut", "cre"),
+           email = "mejriseifeddine21@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Decomposes Time series through different functions and plots different aspects of the process.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    EMD,
+    fpp,
+    ggplot2,
+    patchwork,
+    plotrix,
+    RColorBrewer,
+    readr,
+    Rlibeemd,
+    xts
+Depends: 
+    tidyverse
