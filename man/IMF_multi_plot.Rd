@@ -15,3 +15,9 @@ combined plots
 \description{
 function that plots all IMFs into one combined graph
 }
+\examples{
+library(fpp)
+data(a10)
+VVD::IMF_multi_plot(a10)
+
+}

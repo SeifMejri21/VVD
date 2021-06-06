@@ -22,7 +22,8 @@ a boolean True if test is valid
 Testing the sationarity of a given time series using EEMD method
 }
 \examples{
-VVD::IMF_SCA(data(a10),6,2,0.3)
-
+library(fpp)
+data(a10)
+VVD::IMF_SCA(a10,6,2,0.3)
 
 }

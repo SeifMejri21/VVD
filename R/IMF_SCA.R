@@ -6,14 +6,19 @@
 #' @param beta  framing value [1-beta , 1+beta]
 #'
 #' @return  a boolean True if test is valid
+#' @import fpp
 #' @export
 #'
 #' @examples
-#' VVD::IMF_SCA(data(a10),6,2,0.3)
-#'
+#'library(fpp)
+#'data(a10)
+#'VVD::IMF_SCA(a10,6,2,0.3)
 #'
 IMF_SCA <- function(ts,imf_nb,imf_chosen,beta){
-
+  if (!all(is.finite(ts))) {
+    stop("'input' must contain finite values only.")
+  }
+  else{
   eemd_dec<-Rlibeemd::eemd(ts, num_imfs = imf_nb , num_siftings = 10,
                            ensemble_size = 50,  threads = 1)
   eemd_dec_df<-as.data.frame(eemd_dec)
@@ -62,6 +67,7 @@ IMF_SCA <- function(ts,imf_nb,imf_chosen,beta){
   }
 
   return(test)
+  }
 }
 
 

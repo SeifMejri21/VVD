@@ -18,7 +18,9 @@ data frame containing the IMF s of a given time series
 Makes Ensemble Empiric Mode Decomposition  for a given Time Series
 }
 \examples{
-VVD::IMF_maker(data(a10),6)
+library(fpp)
+data(a10)
+VVD::IMF_maker(a10,6)
 
 
 }

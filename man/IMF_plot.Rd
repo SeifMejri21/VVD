@@ -18,6 +18,8 @@ IMF_plot(data, imf)
 Plots a chosen IMF of an EEMD time series
 }
 \examples{
-#' VVD::IMF_plot(VVD::IMF_maker(data(a10),VVD::IMF_number(data(a10)),2)
+library(fpp)
+data(a10)
+#' VVD::IMF_plot(VVD::IMF_maker(a10),VVD::IMF_number(a10),2)
 
 }

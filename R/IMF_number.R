@@ -3,10 +3,13 @@
 #' @param ts time series to decompose in xts format
 #'
 #' @return the appropriate number of IMF s
+#' @import fpp
 #' @export
 #'
 #' @examples
-#' VVD::IMF_number(data(a10))
+#'library(fpp)
+#'data(a10)
+#' VVD::IMF_number(a10)
 #'
 IMF_number <-function(ts){
   test_vector<-list()

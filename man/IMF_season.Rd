@@ -18,6 +18,8 @@ seasonality of the a given time series
 Funds the seasonality of the a given time series
 }
 \examples{
-VVD::IMF_season(data(a10),T)
+library(fpp)
+data(a10)
+VVD::IMF_season(a10,TRUE)
 
 }

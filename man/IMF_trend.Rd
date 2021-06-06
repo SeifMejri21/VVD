@@ -18,6 +18,8 @@ returns an xts variable containing a
 Fonds the trend of a given time series
 }
 \examples{
-VVD::IMF_trend(data(a10),T)
+library(fpp)
+data(a10)
+VVD::IMF_trend(a10,TRUE)
 
 }

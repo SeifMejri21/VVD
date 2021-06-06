@@ -4,10 +4,13 @@
 #' @param i the index of the column you want to plot
 #'
 #' @return
+#' @import fpp
 #' @export
 #'
 #' @examples
-#' #' VVD::IMF_plot(VVD::IMF_maker(data(a10),VVD::IMF_number(data(a10)),2)
+#'library(fpp)
+#'data(a10)
+#' #' VVD::IMF_plot(VVD::IMF_maker(a10),VVD::IMF_number(a10),2)
 #'
 IMF_plot <- function(data,imf){
   ggplot(data, aes(x=seq(1:length(data[,imf])), y=data[,imf])) +

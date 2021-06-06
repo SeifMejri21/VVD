@@ -16,6 +16,8 @@ the appropriate number of IMF s
 Finds appropriate number of IMFs for a given time series
 }
 \examples{
-VVD::IMF_number(data(a10))
+library(fpp)
+data(a10)
+VVD::IMF_number(a10)
 
 }

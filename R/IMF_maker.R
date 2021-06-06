@@ -5,10 +5,13 @@
 #' @param nb_imf  chosen number of IMFs
 #'
 #' @return  data frame containing the IMF s of a given time series
+#' @import fpp
 #' @export
 #'
 #' @examples
-#' VVD::IMF_maker(data(a10),6)
+#'library(fpp)
+#'data(a10)
+#' VVD::IMF_maker(a10,6)
 #'
 #'
 IMF_maker <- function(ts,nb_imf){
