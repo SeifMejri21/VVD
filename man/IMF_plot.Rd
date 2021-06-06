@@ -4,12 +4,12 @@
 \alias{IMF_plot}
 \title{Plots a chosen IMF of an EEMD time series}
 \usage{
-IMF_plot(data, imf)
+IMF_plot(ts, imf)
 }
 \arguments{
-\item{x}{data frame containing IMF s}
+\item{ts}{time series to manipulate}
 
-\item{i}{the index of the column you want to plot}
+\item{i}{the index of the IMF you want to plot}
 }
 \value{
 
@@ -20,6 +20,6 @@ Plots a chosen IMF of an EEMD time series
 \examples{
 library(fpp)
 data(a10)
-#' VVD::IMF_plot(VVD::IMF_maker(a10),VVD::IMF_number(a10),2)
+#' VVD::IMF_plot(a10,2)
 
 }
