@@ -15,6 +15,10 @@
 #'VVD::IMF_SCA(a10,6,2,0.3)
 #'
 IMF_SCA <- function(ts,imf_nb,imf_chosen,beta){
+  if(!((beta > 0) && (  beta < 1 ))){
+    return("beta must be in ]0,1[")
+  }
+  else{
   if (!all(is.finite(ts))) {
     stop("'input' must contain finite values only.")
   }
@@ -68,6 +72,7 @@ IMF_SCA <- function(ts,imf_nb,imf_chosen,beta){
 
   return(test)
   }
+    }
 }
 
 
