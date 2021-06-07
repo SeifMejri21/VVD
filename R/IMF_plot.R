@@ -1,7 +1,7 @@
 #' Plots a chosen IMF of an EEMD time series
 #'
 #' @param ts time series to manipulate
-#' @param i the index of the IMF you want to plot
+#' @param imf the index of the IMF you want to plot
 #'
 #' @return
 #' @import fpp

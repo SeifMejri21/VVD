@@ -9,7 +9,7 @@ IMF_plot(ts, imf)
 \arguments{
 \item{ts}{time series to manipulate}
 
-\item{i}{the index of the IMF you want to plot}
+\item{imf}{the index of the IMF you want to plot}
 }
 \value{
 
