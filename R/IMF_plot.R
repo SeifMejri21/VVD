@@ -13,6 +13,11 @@
 #' #' VVD::IMF_plot(a10,2)
 #'
 IMF_plot <- function(ts,imf){
+  VVD
+  if(imf > VVD::IMF_number(ts)){
+    stop(paste("you must choose and IMF plot with order lesser or equal to ", VVD::IMF_number(ts)))
+  }
+  else{
   ts_eemd<-VVD::IMF_maker(ts,VVD::IMF_number(ts))
   ggplot(ts_eemd, aes(x= stats::time(ts), y=ts_eemd[,imf])) +
     geom_line() +
@@ -20,6 +25,7 @@ IMF_plot <- function(ts,imf){
     ggtitle(paste("IMF",imf))+
     ylab("Value")  +
     xlab("Time")
+  }
 }
 
 

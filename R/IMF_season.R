@@ -13,6 +13,10 @@
 #'VVD::IMF_season(a10,TRUE)
 #'
 IMF_season<-function(ts,pl){
+  if(class(ts)!="ts"){
+    stop("you must pass a ts type time series in argument")
+  }
+  else{
   ts_eemd<-VVD::IMF_maker(ts,VVD::IMF_number(ts))
   seasonality_vec=c()
   long<-length(ts_eemd[,1])
@@ -24,6 +28,7 @@ IMF_season<-function(ts,pl){
          main = "Seasonality" , xlab = "Time", ylab = "Value" , col="blue3")
   }
     return(ts_eemd$season)
+  }
 }
 
 

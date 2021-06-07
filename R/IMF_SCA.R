@@ -15,8 +15,14 @@
 #'VVD::IMF_SCA(a10,6,2,0.3)
 #'
 IMF_SCA <- function(ts,imf_nb,imf_chosen,beta){
-  if((beta <= 0) || (  beta >= 1 )){
-    return("beta must be in ]0,1[ ,and preferably 0.3")
+  if(class(ts)!="ts"){
+    stop("you must pass a ts type time series in argument")
+  }
+  else if((beta <= 0) || (  beta >= 1 )){
+    stop("beta must be in ]0,1[ ,and preferably 0.3")
+  }
+  else if(imf_nb < imf_chosen){
+    stop("you can't test an IMF with order greater than the number of IMFs ")
   }
   else{
   if (!all(is.finite(ts))) {

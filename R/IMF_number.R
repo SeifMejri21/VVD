@@ -12,6 +12,10 @@
 #' VVD::IMF_number(a10)
 #'
 IMF_number <-function(ts){
+  if(class(ts)!="ts"){
+    stop("you must pass a ts type time series in argument")
+  }
+  else{
   test_vector<-list()
   eemd_dec<-Rlibeemd::eemd(ts, num_imfs = 1000 , num_siftings = 10,
                            ensemble_size = 50,  threads = 1)
@@ -39,6 +43,7 @@ IMF_number <-function(ts){
     }
   }
   return(m)
+  }
 }
 
 

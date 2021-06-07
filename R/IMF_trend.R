@@ -13,6 +13,10 @@
 #' VVD::IMF_trend(a10,TRUE)
 #'
 IMF_trend <- function(ts,pl){
+   if(class(ts)!="ts"){
+      stop("you must pass a ts type time series in argument")
+   }
+   else{
    ts_eemd<-VVD::IMF_maker(ts,VVD::IMF_number(ts))
    x_trend<-VVD::IMF_number(ts)
    if(pl == TRUE){
@@ -20,4 +24,5 @@ IMF_trend <- function(ts,pl){
           main = "Trend" , xlab = "Time", ylab = "Value", col="blue3")
           }
    return(ts_eemd[,VVD::IMF_number(ts)])
+   }
 }
